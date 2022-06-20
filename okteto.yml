@@ -1,0 +1,5 @@
+build:
+  api:
+    dockerfile: Dockerfile
+deploy:
+  - helm upgrade --install code server --set api.image=${OKTETO_BUILD_API_IMAGE}
