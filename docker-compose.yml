@@ -1,0 +1,20 @@
+services:
+  code-server3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - code_pw=$CODE_SEVER_PW
+    scale: 1
+    ports:
+      - 9000
+    volumes:
+      - project:/root/project
+volumes:
+  project:
+    driver_opts:
+      size: 3Gi
+endpoints:
+  - path: /
+    service: code-server3
+    port: 9000
