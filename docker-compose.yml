@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - code_pw=$CODE_SEVER_PW
+        - code_pw=12345
     scale: 1
     ports:
       - 9000
