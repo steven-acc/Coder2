@@ -1,5 +1,7 @@
 build:
   api:
     dockerfile: Dockerfile
+
 deploy:
-  - helm upgrade --install movies chart --set api.image=${OKTETO_BUILD_API_IMAGE}
+  - name: Deploy API
+    command: helm upgrade --install movies-api chart --set image=${OKTETO_BUILD_API_IMAGE}
