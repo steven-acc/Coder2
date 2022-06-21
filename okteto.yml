@@ -3,5 +3,5 @@ build:
     dockerfile: Dockerfile
 
 deploy:
-  - name: Deploy API
-    command: helm upgrade --install movies-api chart --set image=${OKTETO_BUILD_API_IMAGE}
+  compose:
+    - docker-compose.yml
