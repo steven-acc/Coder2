@@ -7,7 +7,7 @@ services:
         - code_pw=12345
     scale: 1
     ports:
-      - 9000
+      - 8080
     volumes:
       - project:/root/project
 volumes:
@@ -17,4 +17,4 @@ volumes:
 endpoints:
   - path: /
     service: code-server3
-    port: 9000
+    port: 8080
